@@ -50,11 +50,14 @@ ocrbot/
 2. Создать виртуальное окружение и активировать его
 3. Установить зависимости из requirements.txt
 4. Создать файл .env и добавить в него переменные окружения:
-    - BOT_TOKEN=<токен вашего бота>
-    - WEBHOOK_HOST=https://4a9b-37-19-205-220.ngrok-free.app
-    - WEBHOOK_PATH=/webhook
-    - WEBAPP_HOST=0.0.0.0  
-    - WEBAPP_PORT=8000
+    BOT_TOKEN=
+    WEBHOOK_HOST=https://4a9b-37-19-205-220.ngrok-free.app/webhook
+    WEBHOOK_PATH=/webhook
+    OZON_CLIENT_ID=
+    OZON_TOKEN=
+    WEBAPP_HOST=0.0.0.0
+    WEBAPP_PORT=8000
+    USERS=user_id_telegram:vk,user_id_telegram:ln,user_id_telegram:*
  
     С такими настройками бот автоматически установит вебхук на адрес https://4a9b-37-19-205-220.ngrok-free.app/webhook
     (можно заметить что это адрес ngrok, который можно использовать для приема запросов из внешнего интернета на 
@@ -65,19 +68,6 @@ ocrbot/
     FastApi будет принимать запросы на url 0.0.0.0, порт 8000.
 5. Запустить бота командой
     ```bash
-    uvicorn main:app --reload
+    sudo uvicorn main:app --host 0.0.0.0 --port 80 --reload
     ```
 6. После остановки сервера вебхук автоматически удалится из настроек Телеграмм
-
-## Запуск в контейнере
-
-1. Клонировать репозиторий
-2. зайти в папку проекта
-```commandline
-cd telegram-bot
-```
-3. Добавить .env файл с переменными окружения
-4. Запустить контейнер
-```bash
-docker-compose up
-```
