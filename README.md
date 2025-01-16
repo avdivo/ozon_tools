@@ -1,6 +1,8 @@
 # Телеграмм бот предоставляет несколько инструментов для работы с магазином в Ozon
 
-**Ссылка на бота: [ocr_bot](https://t.me/LenaVikaOzon_bot)**
+**Ссылка на бота: [ocr_bot](https://t.me/LenaVikaOzon_bot)**  
+**Ссылка на документацию [API Ozon](https://docs.ozon.ru/api/seller/)**
+
 ## Функции
 - Вся информация предоставляется адресно для пользователя 
     (для его товаров, принадлежность которых определяется по его артикулу).
@@ -50,14 +52,14 @@ ocrbot/
 2. Создать виртуальное окружение и активировать его
 3. Установить зависимости из requirements.txt
 4. Создать файл .env и добавить в него переменные окружения:
-    BOT_TOKEN=
-    WEBHOOK_HOST=https://4a9b-37-19-205-220.ngrok-free.app/webhook
-    WEBHOOK_PATH=/webhook
-    OZON_CLIENT_ID=
-    OZON_TOKEN=
-    WEBAPP_HOST=0.0.0.0
-    WEBAPP_PORT=8000
-    USERS=user_id_telegram:vk,user_id_telegram:ln,user_id_telegram:*
+    BOT_TOKEN=  
+    WEBHOOK_HOST=https://4a9b-37-19-205-220.ngrok-free.app/webhook  
+    WEBHOOK_PATH=/webhook  
+    OZON_CLIENT_ID=  
+    OZON_TOKEN=  
+    WEBAPP_HOST=0.0.0.0  
+    WEBAPP_PORT=8000  
+    USERS=user_id_telegram:vk,user_id_telegram:ln,user_id_telegram:*  
  
     С такими настройками бот автоматически установит вебхук на адрес https://4a9b-37-19-205-220.ngrok-free.app/webhook
     (можно заметить что это адрес ngrok, который можно использовать для приема запросов из внешнего интернета на 
